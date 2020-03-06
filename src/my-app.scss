@@ -1,0 +1,17 @@
+nav,
+.container {
+  display: flex;
+}
+
+au-viewport {
+  border: 1px solid lightgrey;
+  flex-grow: 1;
+
+  &:empty {
+    display: none;
+  }
+}
+
+.goto-active {
+  background-color: lightgrey;
+}

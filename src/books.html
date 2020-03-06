@@ -1,0 +1,20 @@
+
+<import from="./book-details"></import>
+
+<div class="book-list">
+    <!--
+        put book-details in the parent scope(the one on my-app.html)
+        in the viewmodel, enter gets parameters, but they are indexed based, so this would need to be accessed as parameters[0]
+        <a goto="../book-details(${book.id})" repeat.for="book of books">
+
+        if want to access it as a property named id, then update it to this
+        <a goto="../book-details(id=${book.id})" repeat.for="book of books">
+        or update the viewmodel with a static parameters property
+    -->
+    <a goto="book-details(${book.id})" repeat.for="book of books">
+        <h5>${book.title} (${book.year})</h5>
+        <div>${book.authors.join(', ')}</div>
+    </a>
+
+    <au-viewport name="book-details"></au-viewport>
+</div>

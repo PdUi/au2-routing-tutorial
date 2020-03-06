@@ -1,0 +1,15 @@
+<import from="./welcome.html"></import>
+<import from="./books"></import>
+
+<nav>
+    <a goto="welcome@main">Welcome</a>
+    <a goto="books@main">Books</a>
+</nav>
+
+<div class="container">
+    <!--
+        says that only these components will go into this viewport: used-by="{componenent1},{component2}"
+        alternatively can specify the viewport on all of the goto properties => <a goto="books@main">Books</a>
+    -->
+    <au-viewport name="main"></au-viewport>
+</div>
